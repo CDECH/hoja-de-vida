@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoja de vida de Daniel</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header class="portada">
+    <div class="avatar" aria-hidden="true">D</div>
+    <p class="etiqueta">HOJA DE VIDA</p>
+    <h1>Daniel</h1>
+    <p>Estudiante de Computación · Séptimo nivel</p>
+    <p>Universidad Politécnica Estatal del Carchi</p>
+
+    <button id="tema" type="button" aria-pressed="false">
+      Activar tema oscuro
+    </button>
+  </header>
+
+  <nav aria-label="Secciones de la hoja de vida">
+    <a href="#datos">Datos</a>
+    <a href="#perfil">Perfil</a>
+    <a href="#formacion">Formación</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="datos">
+      <h2>Datos personales</h2>
+      <dl>
+        <dt><strong>Nombre</strong></dt>
+        <dd>Daniel</dd>
+
+        <dt><strong>Ciudad</strong></dt>
+        <dd>Tulcán, Ecuador</dd>
+
+        <dt><strong>Correo electrónico</strong></dt>
+        <dd>dddd@gmail.com</dd>
+
+        <dt><strong>Teléfono</strong></dt>
+        <dd>0999999991</dd>
+      </dl>
+    </section>
+
+    <section id="perfil">
+      <h2>Perfil personal</h2>
+      <p>
+        Soy Daniel, estudiante de séptimo nivel de Computación
+        en la Universidad Politécnica Estatal del Carchi.
+        Me interesa el desarrollo de software y continuar
+        aprendiendo a crear aplicaciones.
+      </p>
+      <p>
+        Tengo experiencia como mesero, en mantenimiento de
+        extintores, como bombero voluntario y como comerciante.
+        Entre mis habilidades personales destacan la comunicación
+        y la sociabilidad.
+      </p>
+      <h3>Objetivo profesional</h3>
+      <p>
+        Formarme como desarrollador de software y aplicar mis
+        conocimientos en proyectos que resuelvan necesidades
+        de las personas.
+      </p>
+    </section>
+
+    <section id="formacion">
+      <h2>Formación académica</h2>
+
+      <article>
+        <h3>Carrera de Computación</h3>
+        <p>Universidad Politécnica Estatal del Carchi</p>
+        <p>Séptimo nivel · En curso</p>
+      </article>
+
+      <article>
+        <h3>Bachillerato</h3>
+        <p>Estudios de educación secundaria.</p>
+      </article>
+    </section>
+
+    <section id="experiencia">
+      <h2>Experiencia laboral y voluntariado</h2>
+
+      <article>
+        <h3>Mesero</h3>
+        <p>Experiencia en atención a clientes.</p>
+      </article>
+
+      <article>
+        <h3>Mantenimiento de extintores</h3>
+        <p>Experiencia en actividades de mantenimiento de extintores.</p>
+      </article>
+
+      <article>
+        <h3>Bombero voluntario</h3>
+        <p>Participación en actividades de voluntariado como bombero.</p>
+      </article>
+
+      <article>
+        <h3>Comerciante</h3>
+        <p>Experiencia en actividades comerciales.</p>
+      </article>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos académicos</h2>
+
+      <details>
+        <summary>Hoja de vida web integrada en Flutter</summary>
+        <p>
+          Desarrollo de una hoja de vida adaptable a diferentes
+          tamaños de pantalla con HTML, CSS y JavaScript.
+          La página se integra en una aplicación Android
+          mediante un WebView de Flutter.
+        </p>
+        <p>
+          Incluye cambio de tema, búsqueda de habilidades,
+          validación de un formulario y un botón nativo
+          para recargar la página.
+        </p>
+      </details>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+
+      <label for="buscar">Buscar una habilidad</label>
+      <input
+        id="buscar"
+        type="search"
+        placeholder="Ejemplo: Comunicación"
+      >
+
+      <ul class="habilidades">
+        <li>Comunicación</li>
+        <li>Sociabilidad</li>
+        <li>HTML5 — en aprendizaje durante esta práctica</li>
+        <li>CSS3 — en aprendizaje durante esta práctica</li>
+        <li>JavaScript — en aprendizaje durante esta práctica</li>
+        <li>Flutter — en aprendizaje durante esta práctica</li>
+      </ul>
+
+      <p id="sin-resultados" role="status" hidden>
+        No hay coincidencias.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Correo: dddd@gmail.com</p>
+      <p>Teléfono: 0999999991</p>
+
+      <p class="nota">
+        Formulario de demostración: valida los datos,
+        pero no envía ni guarda mensajes.
+      </p>
+
+      <form id="formulario">
+        <label for="nombre">Nombre</label>
+        <input
+          id="nombre"
+          name="nombre"
+          type="text"
+          autocomplete="name"
+          required
+          maxlength="80"
+        >
+
+        <label for="correo">Correo electrónico</label>
+        <input
+          id="correo"
+          name="correo"
+          type="email"
+          autocomplete="email"
+          required
+          maxlength="120"
+        >
+
+        <label for="mensaje">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          required
+          maxlength="1000"
+        ></textarea>
+
+        <button type="submit">Validar datos</button>
+        <p id="respuesta" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Daniel · Hoja de vida</p>
+    <p>Práctica académica · UPEC</p>
+  </footer>
+</body>
+</html>
